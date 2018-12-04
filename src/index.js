@@ -32,7 +32,26 @@ var defaults = {
      * 缩进数值，仅在嵌套规则为 2、3 时有效
      * @type Number
      */
-    tabSize: 4
+    tabSize: 4,
+
+    /**
+     * 处理样式规则
+     * @param style
+     * @returns {*}
+     */
+    processStyle: function (style) {
+        return style;
+    },
+
+    /**
+     * 处理样式规则
+     * @param rule
+     * @param style
+     * @returns {*}
+     */
+    processRule: function (rule, style) {
+        return rule;
+    }
 };
 
 module.exports = function (ast, options) {
